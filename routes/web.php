@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', 'EmployeeController@index')->name('employees.index');
+
+Route::get('/create', 'EmployeeController@create')->name('employees.create');
+Route::post('/create', 'EmployeeController@store')->name('employees.store');
+
+Route::get('/employees/{id}/edit', 'EmployeeController@edit')->name('employees.edit');
+Route::post('/employees/update', 'EmployeeController@update')->name('employees.update');
+
+Route::get('/employees/{id}/delete', 'EmployeeController@destroy')->name('employees.destroy');
+
