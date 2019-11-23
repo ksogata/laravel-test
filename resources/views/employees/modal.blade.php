@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">Gender:</div>
-                    <div class="col-sm">{{$employee->gender}}</div>
+                    <div class="col-sm">{{$employee->gender == 'M' ? 'Male' : 'Female'}}</div>
                 </div>
                 <div class="row">
                     <div class="col-sm">Father's Name:</div>
@@ -31,6 +31,10 @@
                     <div class="col-sm">{{$employee->motherName}}</div>
                 </div>
                 <div class="row">
+                        <div class="col-sm">Mother's Maiden Name:</div>
+                        <div class="col-sm">{{$employee->motherMaiden}}</div>
+                    </div>
+                <div class="row">
                     <div class="col-sm">Date of Birth:</div>
                     <div class="col-sm">{{$employee->dob}}</div>
                 </div>
@@ -40,7 +44,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">Salary:</div>
-                    <div class="col-sm">{{$employee->salary}}</div>
+                    <div class="col-sm">${{$employee->salary}}</div>
                 </div>
                 <div class="row">
                     <div class="col-sm">City:</div>
