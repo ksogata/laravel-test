@@ -86,7 +86,8 @@
             <label for="fatherName">Father's Name</label>
             <input type="text" name = "fatherName" id = "fatherName" class="form-control" required>
         </div>
-        <button type = "submit" class = "btn btn-success">Create</button>
+        <button type = "submit" class = "btn btn-success">{{ __('Create') }}</button>
+        <a class="btn btn-danger" href="{{ route('employees.index') }}">{{ __('Cancel') }}</a>
     </form>
     </div>
 </div>
